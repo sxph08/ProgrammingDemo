@@ -188,7 +188,7 @@ MonoBehaviour:
   turnSpeed: 200
   jumpHeight: 2
   gravity: -10
-  groundCheck: {fileID: 2055452192}
+  groundCheck: {fileID: 0}
   groundCheckRadius: 0.3
   groundLayer:
     serializedVersion: 2
@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f305cfa972ac4d84e8b793a3090bf0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 410087040}
+  targetLight: {fileID: 0}
   playerTag: Player
 --- !u!65 &1646531247
 BoxCollider:

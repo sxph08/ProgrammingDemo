@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CameraFollow : MonoBehaviour
+public class Camera : MonoBehaviour
 {
 
     [SerializeField] private float YMin = -20.0f;
@@ -17,18 +17,17 @@ public class CameraFollow : MonoBehaviour
     public float sensivity = 4.0f;
 
 
-    // Start is called before the first frame update
+ 
     void Start()
     {
 
 
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         currentX += Input.GetAxis("Mouse X") * sensivity * Time.deltaTime;
-        currentY -= Input.GetAxis("Mouse Y") * sensivity * Time.deltaTime; // Invert Y to feel more natural
+        currentY -= Input.GetAxis("Mouse Y") * sensivity * Time.deltaTime; 
 
         currentY = Mathf.Clamp(currentY, YMin, YMax);
 
@@ -38,4 +37,3 @@ public class CameraFollow : MonoBehaviour
 
         transform.LookAt(lookAt.position);
     }
-}
